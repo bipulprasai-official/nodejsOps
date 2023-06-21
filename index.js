@@ -1,10 +1,9 @@
 const express = require('express');
+const router = require('./routes/routers');
 const app = express();
 const port = 4000;
 
-app.get('/', (req, res) => {
-    res.send('Hello today will be learning about github and jenkin');
-});
+app.use(router);
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}!`);
